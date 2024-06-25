@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".Login">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <TextView
+            android:id="@+id/tv_login"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/login"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:textSize="28sp"
+            android:layout_marginHorizontal="30dp"
+            android:layout_gravity="start"
+            android:layout_marginTop="130dp"/>
+        <TextView
+            android:id="@+id/tv_details"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/Please_fill_in_a_few_details_below"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            android:layout_marginHorizontal="30dp"
+            android:layout_gravity="start"
+            android:layout_marginTop="13sp"/>
+
+        <EditText
+            android:id="@+id/email"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@drawable/edittext_custom_bg"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="10dp"
+            android:elevation="5dp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginEnd="30dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:hint="@string/Email"
+            android:inputType="textEmailAddress"/>
+
+        <EditText
+            android:id="@+id/password"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@drawable/edittext_custom_bg"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="10dp"
+            android:elevation="5dp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginEnd="30dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:inputType="textPassword"
+            android:hint="@string/Password"/>
+
+        <TextView
+            android:id="@+id/tv_forget_password"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:layout_marginHorizontal="30dp"
+            android:layout_marginTop="13sp"
+            android:text="@string/Forgot_Password"
+            android:textColor="@color/blue"
+            android:textSize="20sp" />
+
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_login"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="80dp"
+            android:layout_marginTop="50dp"
+            android:background="@drawable/home_background"
+            android:textSize="20sp"
+            app:cornerRadius="10dp"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:text="@string/login"/>
+
+
+    </LinearLayout>
+
+</ScrollView>

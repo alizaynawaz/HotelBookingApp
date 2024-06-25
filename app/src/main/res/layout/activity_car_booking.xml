@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".CarBooking">
+
+
+
+    <TextView
+        android:id="@+id/text_heading"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        android:text="Book a Car"
+        android:textColor="@color/black"
+        android:textSize="24sp"
+        android:textStyle="bold" />
+
+        <!-- Pick Location -->
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/pick_location_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/text_heading"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            android:hint="Pick Location">
+
+            <EditText
+                android:id="@+id/editText_pick_location"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawableStart="@drawable/location_ic"
+                android:drawablePadding="8dp"
+                android:inputType="text" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- Drop-off Location -->
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/dropoff_location_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/pick_location_layout"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            android:hint="Drop-off Location">
+
+            <EditText
+                android:id="@+id/editText_dropoff_location"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawableStart="@drawable/location_ic"
+                android:drawablePadding="8dp"
+                android:inputType="text" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- Map Image -->
+        <ImageView
+            android:id="@+id/image_map"
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            android:layout_below="@id/dropoff_location_layout"
+            android:src="@drawable/map_icon"
+            android:scaleType="fitXY"
+            android:layout_marginTop="7dp" />
+
+        <!-- Car Type and Language -->
+        <LinearLayout
+            android:id="@+id/selection_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/image_map"
+            android:orientation="horizontal"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="7dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="10dp">
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/car_type_layout"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:hint="Select a Car Type"
+                android:textColorHint="@color/black"
+                android:layout_marginEnd="8dp">
+
+                <EditText
+                    android:id="@+id/editText_car_type"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="text"
+                    android:drawableEnd="@drawable/select_ic"
+                    android:drawablePadding="8dp"/>
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/language_layout"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:hint="Select a Language">
+
+                <EditText
+                    android:id="@+id/editText_language"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="text"
+                    android:textColorHint="@color/black"
+                    android:drawableEnd="@drawable/select_ic"
+                    android:drawablePadding="8dp"/>
+
+            </com.google.android.material.textfield.TextInputLayout>
+        </LinearLayout>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn_car_booked"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:text="@string/Booked"
+        android:textAllCaps="false"
+        android:layout_marginLeft="100dp"
+        android:layout_marginRight="100dp"
+        app:cornerRadius="10dp"
+        android:background="@drawable/home_background"
+        android:layout_marginTop="620dp"/>
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bnView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/custom_background"
+        app:menu="@menu/nav_items"
+        android:layout_alignParentBottom="true" />
+
+    </RelativeLayout>
+

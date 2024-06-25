@@ -1,0 +1,55 @@
+<resources>
+    <string name="app_name">SemProject</string>
+    <string name="Register">Register</string>
+    <string name="Create_Account">Create Account</string>
+    <string name="Facebook">Facebook</string>
+    <string name="Google">Google</string>
+    <string name="Register_">Register </string>
+    <string name="Or">Or</string>
+    <string name="Register_with_google">Register with google</string>
+    <string name="Accounts">Create an account, you are agree to our terms</string>
+    <string name="Already_Accounts">Already have an account? Login</string>
+    <string name="Already_have_Accounts">Already have an account? Sign Up</string>
+    <string name="Sign_in">Sign In</string>
+    <string name="Sign_Up">Sign Up</string>
+    <string name="Forgot_Password">Forgot Password?</string>
+    <string name="Find_rooms">Find room</string>
+    <string name="Forgot_Password_info">Please entered your registered email address to recover
+    your password</string>
+    <string name="Please_fill_in_a_few_details_below">Please fill in a few details below</string>
+    <string name="FullName">FullName</string>
+    <string name="Booked">Booked</string>
+    <string name="open">Open</string>
+    <string name="close">Close</string>
+    <string name="Email">Email</string>
+    <string name="Password">Password</string>
+    <string name="Submit">Submit</string>
+    <string name="Rooms">Rooms</string>
+    <string name="Stay">Stay</string>
+    <string name="Pass">Pass</string>
+    <string name="Where_do_you_want">Where do you want</string>
+    <string name="Check_in_Date_Time">Check-in Date and Time</string>
+    <string name="Check_out_Date_Time">Check-out Date and Time</string>
+    <string name="Adult_Child_Room">0 Adult. 0 Child. 0 Room</string>
+    <string name="Fan">Fan</string>
+    <string name="Air_Conditioned">Air Conditioned</string>
+    <string name="Search">Search</string>
+    <string name="Best_place">Best Places</string>
+    <string name="Best_hotels">Best Hotels</string>
+    <string name="view_all">View All</string>
+    <string name="Car_booking">Car booking</string>
+    <string name="Car_washing">Car washing</string>
+    <string name="My_profile">My profile</string>
+    <string name="Settings">Settings</string>
+
+    <string name="Find_Hotels">Find Hotels</string>
+
+
+    <string name="Email_has_been_used">Email has been used</string>
+    <string name="Sign_In">Sign in</string>
+    <string name="password">Password</string>
+    <string name="login">Login</string>
+    <string name="Enter_your_registered_email_to_sign_in">Enter your registered email to sign in</string>
+    <string name="Sign_in_with_google">Sign in with google</string>
+    <string name="Oops_your_password_is_incorrect">Oops,your password is incorrect</string>
+</resources>

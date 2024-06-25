@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".CarWashing">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white">
+
+        <TextView
+            android:id="@+id/header_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="16dp"
+            android:text="Car Washing"
+            android:textColor="@android:color/black"
+            android:textSize="24sp"
+            android:textStyle="bold" />
+
+        <LinearLayout
+            android:id="@+id/car_details_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/header_text"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <TextView
+                android:id="@+id/car_details_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Car Details"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:layout_marginBottom="8dp" />
+
+            <ImageView
+                android:id="@+id/car_image"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:src="@drawable/car_placeholder"
+                android:scaleType="centerCrop"
+                android:contentDescription="Car Image"
+                android:layout_marginBottom="16dp"/>
+
+            <TextView
+                android:id="@+id/car_information_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Car Name: Toyota Corolla\nPlate Number: ABC-123\nColor: Silver"
+                android:textColor="@android:color/black"
+                android:textSize="16sp"/>
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/change_car_button"
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+                android:text="Change Car"
+                android:textAllCaps="false"
+                android:textColor="@android:color/white"
+                android:background="@drawable/home_background"
+                android:layout_marginTop="16dp"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/service_details"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/car_details_layout"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="16dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/service_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:text="Select Service"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <HorizontalScrollView
+                android:id="@+id/service_options_scrollview"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:id="@+id/service_options_layout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:orientation="horizontal">
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/button_exterior_wash"
+                        android:layout_width="150dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="8dp"
+                        android:background="@drawable/home_background"
+                        android:text="Exterior Wash"
+                        android:textAllCaps="false"
+                        android:textColor="@android:color/white"
+                        android:textSize="16sp" />
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/button_interior_clean"
+                        android:layout_width="150dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="8dp"
+                        android:textAllCaps="false"
+                        android:background="@drawable/home_background"
+                        android:text="Interior Clean"
+                        android:textColor="@android:color/white"
+                        android:textSize="16sp" />
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/button_full_service"
+                        android:layout_width="150dp"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/home_background"
+                        android:text="Full Service"
+                        android:textAllCaps="false"
+                        android:textColor="@android:color/white"
+                        android:textSize="16sp" />
+
+                </LinearLayout>
+            </HorizontalScrollView>
+
+        </LinearLayout>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/schedule_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginTop="650dp"
+            android:textAllCaps="false"
+            android:background="@drawable/home_background"
+            android:padding="16dp"
+            android:text="Schedule Car Wash"
+            android:textColor="@android:color/white"
+            android:textSize="18sp" />
+
+
+    </RelativeLayout>
+</ScrollView>

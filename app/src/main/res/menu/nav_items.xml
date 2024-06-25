@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group
+        android:checkableBehavior="single"
+        >
+        <item
+            android:id="@+id/Rooms"
+            android:icon="@drawable/room_ic"
+            android:title="@string/Rooms"
+            />
+        <item
+            android:id="@+id/Car_booking"
+            android:icon="@drawable/car_booking_ic"
+            android:title="@string/Car_booking"
+            />
+        <item
+            android:id="@+id/Car_washing"
+            android:icon="@drawable/car_wash_ic"
+            android:title="@string/Car_washing"
+            />
+        <item
+            android:id="@+id/profile"
+            android:icon="@drawable/profile_ic"
+            android:title="@string/My_profile"
+            />
+        <item
+            android:id="@+id/nav_bottom_settings"
+            android:icon="@drawable/setting_ic"
+            android:title="@string/Settings"
+            />
+    </group>
+</menu>

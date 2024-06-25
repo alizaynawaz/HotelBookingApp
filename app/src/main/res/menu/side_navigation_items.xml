@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/ventilated_rooms"
+        android:title="Ventilated Rooms"/>
+    <item
+        android:id="@+id/Air_conditioned"
+        android:title="Air Conditioned Rooms"/>
+    <item
+        android:id="@+id/Price_low_to_high"
+        android:title="Price-low to high"/>
+    <item
+        android:id="@+id/review_rating"
+        android:title="Review and Rating"/>
+    <item
+        android:id="@+id/reservation_policy"
+        android:title="Reservation Policy"/>
+    <item
+        android:id="@+id/facilities"
+        android:title="Facilities"/>
+    <item
+        android:id="@+id/room_accessibility"
+        android:title="Room Accessibility"/>
+    <item
+        android:id="@+id/fun_things"
+        android:title="Fun things to do"/>
+
+
+</menu>

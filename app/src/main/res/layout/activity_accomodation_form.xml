@@ -1,0 +1,363 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.drawerlayout.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/drawer_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:context=".AccomodationForm">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@id/bnView">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/Find_Hotels"
+                        android:textStyle="bold"
+                        android:textSize="20sp"
+                        android:layout_weight="1"
+                        android:gravity="start"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/Stay"
+                        android:gravity="center"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:drawableStart="@drawable/rec_ellipse"
+                        android:gravity="center"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/Pass"
+                        android:gravity="center"/>
+
+                    <TextView
+                        android:id="@+id/union"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:drawableStart="@drawable/union"
+                        android:gravity="center"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:paddingTop="16dp">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/location"
+                        android:contentDescription="Location Icon"/>
+
+                    <EditText
+                        android:id="@+id/locationEditText"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
+                        android:textColor="@color/black"
+                        android:layout_weight="1"
+                        android:text="@string/Where_do_you_want"
+                        android:padding="10dp"
+                        android:minHeight="48dp"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:paddingTop="16dp">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:contentDescription="Calendar Icon"
+                        android:src="@drawable/calender" />
+
+                    <EditText
+                        android:id="@+id/checkinDateTimeEditText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:focusable="false"
+                        android:minHeight="48dp"
+                        android:onClick="showCheckinDateTimePicker"
+                        android:padding="10dp"
+                        android:text="@string/Check_in_Date_Time"
+                        android:textColor="@color/black"
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:paddingTop="16dp">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/calender"
+                        android:contentDescription="Calendar Icon"/>
+
+                    <EditText
+                        android:id="@+id/checkoutDateTimeEditText"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/Check_out_Date_Time"
+                        android:textColor="@color/black"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
+                        android:focusable="false"
+                        android:padding="10dp"
+                        android:minHeight="48dp"
+                        android:onClick="showCheckoutDateTimePicker"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:paddingTop="16dp">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/cust_icon"
+                        android:contentDescription="Guest Icon"/>
+
+                    <EditText
+                        android:id="@+id/numberOfGuestsEditText"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
+                        android:textColor="@color/black"
+                        android:text="@string/Adult_Child_Room"
+                        android:focusable="false"
+                        android:padding="10dp"
+                        android:minHeight="48dp"
+                        android:onClick="showGuestOptions"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:paddingTop="16dp">
+
+                    <CheckBox
+                        android:id="@+id/fanCheckBox"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
+                        android:text="@string/Fan"/>
+
+                    <CheckBox
+                        android:id="@+id/airConditionedCheckBox"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="60dp"
+                        android:layout_marginRight="60dp"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
+                        android:text="@string/Air_Conditioned"/>
+
+                </LinearLayout>
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/searchButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/Search"
+                    android:textAllCaps="false"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    app:cornerRadius="10dp"
+                    android:background="@drawable/home_background"
+                    android:layout_marginTop="20dp"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center"
+                    android:layout_marginTop="10dp"
+                    android:paddingTop="16dp">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:textSize="20sp"
+                        android:text="@string/Best_place"
+                        android:textStyle="bold"
+                        android:gravity="start"/>
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:textSize="20sp"
+                        android:text="@string/view_all"
+                        android:textStyle="bold"
+                        android:gravity="end"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:paddingTop="16dp">
+
+                    <ImageView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:src="@drawable/place_image"
+                        android:contentDescription="Place Image"/>
+
+                    <ImageView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:src="@drawable/senegal_image"
+                        android:contentDescription="Senegal Image"/>
+
+                    <ImageView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:src="@drawable/ville_image"
+                        android:contentDescription="Ville Image"/>
+
+                    <ImageView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:src="@drawable/lagoitra_image"
+                        android:contentDescription="Lagoitra Image"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:paddingTop="16dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/Best_hotels"
+                        android:textSize="20sp"
+                        android:textStyle="bold"/>
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:textSize="20sp"
+                        android:text="@string/view_all"
+                        android:textStyle="bold"
+                        android:gravity="end"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:paddingTop="16dp">
+
+                    <ImageView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:src="@drawable/hedengolf"
+                        android:contentDescription="heden golf Image"/>
+
+                    <ImageView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:src="@drawable/onomo"
+                        android:contentDescription="onomo Image"/>
+
+                    <ImageView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:src="@drawable/adagio_hotel"
+                        android:contentDescription="adagio hotel Image"/>
+
+                    <ImageView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:src="@drawable/hotel_image"
+                        android:contentDescription="hotel Image"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+        </ScrollView>
+
+        <com.google.android.material.bottomnavigation.BottomNavigationView
+            android:id="@+id/bnView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/custom_background"
+            app:menu="@menu/nav_items"
+            android:layout_alignParentBottom="true" />
+
+    </RelativeLayout>
+
+    <com.google.android.material.navigation.NavigationView
+        android:id="@+id/navigation_view"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        android:fitsSystemWindows="true"
+        app:headerLayout="@layout/header_layout"
+        app:menu="@menu/side_navigation_items" />
+
+</androidx.drawerlayout.widget.DrawerLayout>
+
+
+
